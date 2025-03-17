@@ -61,18 +61,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const albums = [
     {
       title: '',
-      cover: '../assets/jazz.jpg',
-      audio: '../assets/jazz.mp3',
+      cover: 'jazz.jpg',
+      audio: 'jazz.mp3',
     },
     {
       title: '',
-      cover: '../assets/chill.jpg',
-      audio: '../assets/chill.mp3',
+      cover: 'chill.jpg',
+      audio: 'chill.mp3',
     },
     {
       title: '',
-      cover: '../assets/rap.jpg',
-      audio: '../assets/rap.mp3',
+      cover: 'rap.jpg',
+      audio: 'rap.mp3',
     },
   ];
   let currentAlbum = 0;
