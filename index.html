@@ -11,65 +11,55 @@
       <h1>Soundfork</h1>
     </header>
 
-    <!-- ヒーローセクション：画面いっぱいに動画背景 -->
     <section id="hero">
       <video autoplay muted loop id="bgVideo">
         <source src="bg-guitar.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="hero-content">
-        <h1>音声データにサウンドエフェクトを追加。無料です。</h1>
+        <h1 class="hero-title">
+          音声データにサウンドエフェクトを追加。無料です。
+        </h1>
         <p>
-          まずは簡単に音声データをアップロードし、お好みのサウンドエフェクトを選んでください。<br />
-          処理後は新しい音声データをすぐに再生またはダウンロード可能です。<br />
-          アップロードされたデータは保存されませんので、ご安心ください。
+          音声データをアップロードし、お好みのサウンドエフェクトを選択してください。<br />
+          処理後は新しい音声データをすぐに再生またはダウンロードできます。<br />
+          アップロードされたデータは保存されません。ご安心ください。
         </p>
       </div>
     </section>
 
-    <!-- サービスセクション -->
     <section id="service">
-      <h2 class="section-title">エフェクトを追加する。</h2>
-      <div class="carousel">
-        <!-- ファイル選択：白背景、丸みのある枠、統一サイズ -->
+      <h2 class="section-title">音源に自由にエフェクトを追加</h2>
+      <div class="vertical-stack">
         <input
           type="file"
           id="audioFile"
           class="rounded-input uniform-element"
           accept="audio/*"
         />
-        <!-- サウンドエフェクト選択：同様に -->
         <select id="effectSelect" class="rounded-select uniform-element">
           <option value="reverb">Reverb</option>
           <option value="delay">Delay</option>
           <option value="chorus">Chorus</option>
         </select>
-        <!-- ボタン -->
         <button id="processBtn" class="btn-primary uniform-element">
-          作成
+          無料で作成
         </button>
-        <div id="loading" style="display: none">処理中...</div>
-        <div id="result" style="display: none">
-          <audio id="audioPlayer" controls></audio>
-          <a id="downloadLink" href="#" download="processed.wav"
-            >ダウンロード</a
-          >
-        </div>
+      </div>
+      <div id="loading" style="display: none">処理中...</div>
+      <div id="result" style="display: none">
+        <audio id="audioPlayer" controls></audio>
+        <a id="downloadLink" href="#" download="processed.wav">ダウンロード</a>
       </div>
     </section>
 
-    <!-- 事例セクション -->
     <section id="examples">
-      <h2 class="section-title">サンプルを試聴してみる。</h2>
+      <h2 class="section-title">サンプル試聴コーナー</h2>
       <div class="carousel">
-        <!-- モダンなデザインの左右矢印ボタン -->
         <button id="prevBtn" class="carousel-btn">←</button>
-        <div id="albumDisplay">
-          <!-- アルバムジャケットと曲情報を表示 -->
-        </div>
+        <div id="albumDisplay"></div>
         <button id="nextBtn" class="carousel-btn">→</button>
       </div>
-      <!-- エフェクト選択とオーディオ再生を縦並びに -->
       <div class="vertical-stack">
         <audio id="audioExample" controls>
           <source id="audioSource" src="" type="audio/mpeg" />
@@ -85,6 +75,10 @@
         </button>
       </div>
     </section>
+
+    <footer class="footer">
+      <p class="copyright">&copy; 2025 Soundfork All Rights Reserved.</p>
+    </footer>
 
     <script src="app.js"></script>
   </body>
