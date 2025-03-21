@@ -269,3 +269,17 @@ header {
   font-size: 0.8rem;
   margin-top: 0;
 }
+
+/*
+#bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('hero-img.jpeg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+*/
