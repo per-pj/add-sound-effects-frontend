@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     serviceSection.scrollIntoView({ behavior: 'smooth' });
   });
 
-  /* ======================== フェードインアニメーション ======================== */
+  /* ======================== fade-in ======================== */
   const fadeElements = document.querySelectorAll('.fade-element');
   const observerOptions = {
     threshold: 0.2,
