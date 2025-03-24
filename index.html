@@ -7,30 +7,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Soundfork</h1>
+    <!-- header -->
+    <header class="header section">
+      <div class="header-container">
+        <h3 class="logo-text">Soundfork</h3>
+      </div>
     </header>
 
+    <!-- hero -->
     <section id="hero">
-      <video autoplay muted loop id="bgVideo">
+      <video autoplay muted loop playsinline id="bgVideo">
         <source src="bg-guitar.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <!-- <div id="bgImage"></div> -->
       <div class="hero-content">
-        <h1 class="hero-title">
-          音声データにサウンドエフェクトを追加。無料です。
-        </h1>
-        <p>
-          音声データをアップロードし、お好みのサウンドエフェクトを選択してください。<br />
-          処理後は新しい音声データをすぐに再生またはダウンロードできます。<br />
-          アップロードされたデータは保存されません。ご安心ください。
+        <h1 class="hero-title fade-element">サウンドエフェクトを追加。</h1>
+        <p class="hero-text fade-element">
+          お好みのエフェクターを選択して、あなたの音声データを無料でカスタマイズできます。
         </p>
       </div>
     </section>
 
-    <section id="service">
-      <h2 class="section-title">音源に自由にエフェクトを追加</h2>
+    <!-- service -->
+    <section id="service" class="section section-layout">
+      <h2 class="section-title fade-element">エフェクターを選択。</h2>
+      <p class="section-text fade-element">
+        音声データをアップロードし、サウンドエフェクトを選択してください。<br />
+        すぐに再生、ダウンロードできます。
+      </p>
       <div class="vertical-stack">
         <input
           type="file"
@@ -44,7 +48,7 @@
           <option value="chorus">Chorus</option>
         </select>
         <button id="processBtn" class="btn-primary uniform-element">
-          無料で作成
+          無料で新規作成する
         </button>
       </div>
       <div id="loading" style="display: none">処理中...</div>
@@ -54,8 +58,12 @@
       </div>
     </section>
 
-    <section id="examples">
-      <h2 class="section-title">サンプル試聴コーナー</h2>
+    <!-- player -->
+    <section id="player" class="section section-layout">
+      <h2 class="section-title fade-element">試聴してみる。</h2>
+      <p class="section-text fade-element">
+        エフェクターの効果を体感できます。
+      </p>
       <div class="carousel">
         <button id="prevBtn" class="carousel-btn">←</button>
         <div id="albumDisplay"></div>
@@ -72,15 +80,27 @@
           <option value="chorus">Chorus</option>
         </select>
         <button id="applyEffectBtn" class="btn-primary uniform-element">
-          変更
+          試聴してみる
         </button>
       </div>
     </section>
 
+    <!-- data-policy -->
+    <section id="data-policy" class="section section-layout">
+      <h2 class="section-title fade-element">データについて。</h2>
+      <p class="section-text fade-element">
+        アップロードされたデータは保存されませんので、ご安心ください。<br />
+        音声データにエフェクトをかけて、新しいサウンドをお楽しみください。
+      </p>
+      <button id="policy-cta" class="btn-primary">利用してみる</button>
+    </section>
+
+    <!-- footer -->
     <footer class="footer">
       <p class="copyright">&copy; 2025 Soundfork All Rights Reserved.</p>
     </footer>
 
+    <!-- script -->
     <script src="app.js"></script>
   </body>
 </html>
