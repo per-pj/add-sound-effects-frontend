@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  /* ======================== サービスセクション処理 ======================== */
+  /* ======================== serviceセクション処理 ======================== */
   const processBtn = document.getElementById('processBtn');
   const audioFileInput = document.getElementById('audioFile');
   const effectSelect = document.getElementById('effectSelect');
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  /* ======================== 事例セクション（カルーセル＆サンプル再生） ======================== */
+  /* ======================== demoセクション（カルーセル＆サンプル再生） ======================== */
   const albumDisplay = document.getElementById('albumDisplay');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
@@ -91,33 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateAlbumDisplay();
 
-  /* ======================== セクション間スナップスクロール ======================== */
-  const sections = document.querySelectorAll('.section');
-  let currentIndex = 0;
-  let isScrolling = false;
-
-  const scrollToSection = (index) => {
-    if (index < 0 || index >= sections.length) return;
-    isScrolling = true;
-    sections[index].scrollIntoView({ behavior: 'smooth' });
-    currentIndex = index;
-    setTimeout(() => {
-      isScrolling = false;
-    }, 1000);
-  };
-
-  window.addEventListener('wheel', (event) => {
-    if (isScrolling) return;
-    if (event.deltaY > 0) scrollToSection(currentIndex + 1);
-    else if (event.deltaY < 0) scrollToSection(currentIndex - 1);
-  });
-
-  /* ======================== ポリシーCTAのスクロール ======================== */
-  const policyCTA = document.getElementById('policy-cta');
+  /* ======================== スクロール処理 ======================== */
+  const scrollButtons = document.querySelectorAll('.scroll-to-service');
   const serviceSection = document.getElementById('service');
-
-  policyCTA.addEventListener('click', () => {
-    serviceSection.scrollIntoView({ behavior: 'smooth' });
+  scrollButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      serviceSection.scrollIntoView({ behavior: 'smooth' });
+    });
   });
 
   /* ======================== fade-in ======================== */

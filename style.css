@@ -1,102 +1,147 @@
 /* ======================== 基本設定 ======================== */
-:root {
-  --primary-color: #111;
-  --secondary-color: #fff;
-  --accent-color: #2d2d2d;
-  --background-color: #f8f9fa;
-  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-size-base: 16px;
-  --line-height-base: 1.6;
-  --letter-spacing-base: 0.05rem;
-  --padding-section: 1rem;
-  --form-max-width: 500px;
-  --btn-gradient: linear-gradient(135deg, #101012, #2e3335);
-}
-
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
-/* ======================== body ======================== */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  padding: 7rem 5rem 0 5rem;
   margin: 0;
-  padding: 0;
-  font-family: var(--font-family-base);
   background-color: #fff;
-  font-size: var(--font-size-base);
-  color: var(--primary-color);
-  line-height: var(--line-height-base);
-  letter-spacing: var(--letter-spacing-base);
-  box-sizing: border-box;
+  font-size: 1rem;
+  color: #060315;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01rem;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ======================== header ======================== */
-.header {
-  background-color: #000;
-  color: #fff;
-  padding: 1rem;
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-text {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+/* text */
+h1,
+h2 {
+  font-weight: 500;
   margin: 0;
 }
 
-/* ======================== hero ======================== */
-#hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-#bgImg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 90%;
-  max-width: 1200px;
-  color: var(--secondary-color);
-  z-index: 1;
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+.hero-title-text {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.hero-text {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  margin-bottom: 1.5rem;
+.hero-desc-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* ======================== section ======================== */
-.section-layout {
-  padding: var(--padding-section);
-  min-height: 100vh;
+.title-text {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.desc-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ======================== section-header ======================== */
+.header {
+  padding: 0 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu li {
+  list-style: none;
+  margin: 0;
+}
+
+.nav-link {
+  color: #060315;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-right: 1.8rem;
+}
+
+/* btn */
+.btn-header {
+  background-color: #060315;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.btn-header:hover {
+  background-color: #262626;
+}
+
+.btn-primary {
+  background-color: #060315;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.btn-primary:hover {
+  background-color: #262626;
+}
+
+/* ======================== section-hero ======================== */
+/* container */
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 3.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,68 +149,15 @@ body {
   text-align: center;
 }
 
-.section-title {
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  margin: 0;
-}
-
-.section-text {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  margin-bottom: 1.2rem;
-}
-
-/* ======================== service ======================== */
-#service {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
-  transition: background 0.5s ease;
-}
-
-/* ======================== フォーム・共通スタイル ======================== */
-.uniform-element {
-  height: 50px;
-  line-height: 40px;
-}
-
-.rounded-input,
-.rounded-select,
-#effectSelectExample {
-  background-color: #fff;
-  border: none;
-  color: var(--primary-color);
-  border-radius: 30px;
-  padding: 5px 20px;
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  width: 100%;
-  max-width: var(--form-max-width);
-  box-sizing: border-box;
-}
-
-.vertical-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin: 0 auto;
-  width: 100%;
-  max-width: var(--form-max-width);
-}
-
-#audioExample {
-  width: 100%;
-  max-width: var(--form-max-width);
-}
-
-/* ======================== ボタン ======================== */
+/* btn */
 .btn-primary {
-  background: var(--btn-gradient);
+  background-color: #060315;
   border: none;
-  color: var(--secondary-color);
-  padding: 15px 20px;
-  font-size: 1rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 2rem;
   transition: background 0.3s ease;
   display: inline-flex;
   align-items: center;
@@ -174,18 +166,96 @@ body {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #1a1b1d, #3c4247);
+  background-color: #262626;
 }
 
-/* ======================== player ======================== */
-#player {
-  background: linear-gradient(135deg, #43cea2, #185a9d);
-  color: #fff;
-  transition: background 0.5s ease;
+/* img */
+.bgImg {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
 }
 
-/* carousel */
-.carousel {
+/* ======================== section-effects ======================== */
+.effects-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1.25rem;
+  width: 100%;
+  max-width: 75rem;
+}
+
+.effect-item {
+  width: 30%;
+  text-align: center;
+}
+
+.effect-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* ======================== section-service ======================== */
+.bg-card {
+  width: 100%;
+  padding: 3.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.bg-primary {
+  background-color: #f4d88a;
+}
+
+/* input, player */
+.uniform-element {
+  height: 3.125rem;
+  line-height: 2.5rem;
+}
+
+.rounded-input,
+.rounded-select,
+#effectSelectExample {
+  width: 100%;
+  max-width: 31.25rem;
+  padding: 0.313rem 1.25rem;
+  margin: 0.5rem 0;
+  background-color: #f0f3f4;
+  font-size: 1rem;
+  color: #111;
+  border: 0.5px solid #76767e;
+  border-radius: 2rem;
+}
+
+audio {
+  background-color: #f0f0f0;
+}
+
+.column-layout {
+  width: 100%;
+  max-width: 31.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#audioExample {
+  width: 100%;
+  max-width: 31.25rem;
+  border: 0.5px solid #76767e;
+  border-radius: 2rem;
+}
+
+/* ======================== section-demo ======================== */
+.carousel-layout {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -193,59 +263,57 @@ body {
 }
 
 #albumDisplay {
-  width: 250px;
-  height: 250px;
-  background-color: #ddd;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 1rem;
 }
 
-.carousel-btn {
-  width: 48px;
-  height: 48px;
-  background-color: #f0f3f4;
+/* btn-arrow */
+.btn-arrow {
+  width: 3rem;
+  height: 3rem;
+  background-color: #f8f8f8;
   border: none;
   border-radius: 50%;
-  color: var(--primary-color);
+  color: #111;
   font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 1rem;
+  margin: 0 4rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.carousel-btn:hover {
+.btn-arrow:hover {
   background-color: #e0e3e4;
 }
 
-/* ======================== data-policy ======================== */
-#data-policy {
-  background: linear-gradient(135deg, #7f00ff, #e100ff);
-  color: #fff;
-  transition: background 0.5s ease;
+/* ======================== section-data ======================== */
+.bg-secondary {
+  background-color: #67ca7c;
 }
 
-/* ======================== footer ======================== */
+/* ======================== section-footer ======================== */
 .footer {
-  background-color: #000;
-  color: #fff;
-  padding: 2rem;
+  padding: 2rem 0;
   text-align: center;
 }
-
-.footer .copyright {
-  font-size: 0.8rem;
-  margin-top: 0;
+.copyright {
+  font-size: 0.9rem;
+  color: #76767e;
+  letter-spacing: 0;
 }
 
-/* ======================== fade-in ======================== */
+/* ======================== animation ======================== */
+/* fade-in */
 .fade-element {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(1.25rem);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -254,16 +322,24 @@ body {
   transform: translateY(0);
 }
 
-/* ======================== レスポンシブ対応 ======================== */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: clamp(2rem, 6vw, 3rem);
+/* ======================== responsive ======================== */
+@media (max-width: 48rem) {
+  /* 768px */
+  body {
+    padding: 6rem 1rem 0 1rem;
   }
-  .hero-content p {
-    font-size: clamp(0.9rem, 2vw, 1rem);
+  .header {
+    padding: 0 10px;
   }
-  .header-container {
-    flex-direction: column;
+  .hide-on-mobile {
+    display: none;
+  }
+  .title-text {
+    font-size: 2rem;
+  }
+  .effect-item {
+    width: 100%;
+    text-align: center;
   }
   .uniform-element,
   .rounded-input,
@@ -272,26 +348,26 @@ body {
     max-width: 90%;
   }
   #albumDisplay {
-    width: 250px;
-    height: 250px;
+    width: 15.625rem;
+    height: 15.625rem;
   }
-  .carousel-btn {
-    width: 40px;
-    height: 40px;
+  .btn-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
     font-size: 1.5rem;
     margin: 0 0.5rem;
   }
+  .effects-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
 }
 
-@media (max-width: 480px) {
-  .hero-content {
-    width: 90%;
-  }
-  .hero-title {
-    font-size: clamp(1.8rem, 6vw, 2.5rem);
-  }
-  .hero-content p {
-    font-size: clamp(0.9rem, 2vw, 1rem);
+@media (max-width: 30rem) {
+  /* 480px */
+  .title-text {
+    font-size: 1.8rem;
   }
   .btn-primary {
     padding: 0.5rem 1rem;

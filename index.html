@@ -3,104 +3,155 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Soundfork | 音声データに無料でサウンドエフェクトを追加</title>
+    <title>Soundfork | 音声データをサウンドエフェクターで加工</title>
     <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- header -->
-    <header class="header section">
-      <div class="header-container">
+    <header class="header">
+      <div class="header-inner">
         <h3 class="logo-text">Soundfork</h3>
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li>
+              <a href="#effects" class="nav-link hide-on-mobile">エフェクト</a>
+            </li>
+            <li><a href="#demo" class="nav-link hide-on-mobile">デモ</a></li>
+            <li>
+              <a href="#data-policy" class="nav-link hide-on-mobile">料金</a>
+            </li>
+            <li><a href="#data-policy" class="nav-link">お問い合わせ</a></li>
+            <li>
+              <button class="btn-header scroll-to-service hide-on-mobile">
+                加工する
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
-
     <!-- hero -->
     <section id="hero">
-      <img src="hero.jpg" alt="背景画像" id="bgImg" />
-      <div class="hero-content">
-        <h1 class="hero-title fade-element">
-          サウンドエフェクターで仕上げる。
+      <div class="container fade-element">
+        <h1 class="hero-title-text">
+          あなたの音声データを<br />サウンドエフェクターで加工
         </h1>
-        <p class="hero-text fade-element">
-          お好みのサウンドエフェクトを選択して、あなたの音声データをカスタマイズできます。
+        <p class="hero-desc-text">
+          エフェクトを選択し、あなたの楽曲や音声ファイルをカスタマイズしましょう。<br />
+          新しいサウンドを再生したり、ダウンロードできます。
         </p>
+        <button class="btn-primary scroll-to-service">利用してみる</button>
+        <img src="hero.jpg" alt="背景画像" class="bgImg" />
       </div>
     </section>
-
-    <!-- service -->
-    <section id="service" class="section section-layout">
-      <h2 class="section-title fade-element">エフェクターを選択。</h2>
-      <p class="section-text fade-element">
-        音声データをアップロードし、サウンドエフェクトを選択してください。<br />
-        すぐに再生、ダウンロードできます。
-      </p>
-      <div class="vertical-stack">
-        <input
-          type="file"
-          id="audioFile"
-          class="rounded-input uniform-element"
-          accept="audio/*"
-        />
-        <select id="effectSelect" class="rounded-select uniform-element">
-          <option value="reverb">Reverb</option>
-          <option value="delay">Delay</option>
-          <option value="chorus">Chorus</option>
-        </select>
-        <button id="processBtn" class="btn-primary uniform-element">
-          無料で新規作成する
-        </button>
-      </div>
-      <div id="loading" style="display: none">処理中...</div>
-      <div id="result" style="display: none">
-        <audio id="audioPlayer" controls></audio>
-        <a id="downloadLink" href="#" download="processed.wav">ダウンロード</a>
-      </div>
-    </section>
-
-    <!-- player -->
-    <section id="player" class="section section-layout">
-      <h2 class="section-title fade-element">試聴してみる。</h2>
-      <p class="section-text fade-element">
-        サウンドエフェクトの効果を体感できます。
-      </p>
-      <div class="carousel">
-        <button id="prevBtn" class="carousel-btn">←</button>
-        <div id="albumDisplay"></div>
-        <button id="nextBtn" class="carousel-btn">→</button>
-      </div>
-      <div class="vertical-stack">
-        <audio id="audioExample" controls>
-          <source id="audioSource" src="" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-        <select id="effectSelectExample" class="rounded-select uniform-element">
-          <option value="reverb">Reverb</option>
-          <option value="delay">Delay</option>
-          <option value="chorus">Chorus</option>
-        </select>
-        <button id="applyEffectBtn" class="btn-primary uniform-element">
-          試聴してみる
+    <!-- effects -->
+    <section id="effects">
+      <div class="container fade-element">
+        <h1 class="title-text">豊かなエフェクトをご用意</h1>
+        <p class="desc-text">
+          現在、3種類のサウンドエフェクターをご利用いただけます。
+        </p>
+        <div class="effects-container">
+          <div class="effect-item">
+            <img src="reverb.jpg" alt="リバーブエフェクト" />
+            <p>リバーブ：音に奥行きを加えます</p>
+          </div>
+          <div class="effect-item">
+            <img src="delay.jpg" alt="ディレイエフェクト" />
+            <p>ディレイ：エコーのような効果を生みます</p>
+          </div>
+          <div class="effect-item">
+            <img src="chorus.jpg" alt="コーラスエフェクト" />
+            <p>コーラス：厚みのある音を作ります</p>
+          </div>
+        </div>
+        <button id="effects-cta" class="btn-primary scroll-to-service">
+          利用してみる
         </button>
       </div>
     </section>
-
+    <!-- service  -->
+    <section id="service">
+      <div class="container fade-element">
+        <div class="bg-card bg-primary">
+          <h2 class="title-text">今すぐ加工してみましょう</h2>
+          <p class="desc-text">
+            あなたの楽曲や音声ファイルをアップロードし、エフェクトを追加して加工してください。
+          </p>
+          <div class="column-layout">
+            <input
+              type="file"
+              id="audioFile"
+              class="rounded-input uniform-element"
+              accept="audio/*"
+            />
+            <select id="effectSelect" class="rounded-select uniform-element">
+              <option value="reverb">リバーブ</option>
+              <option value="delay">ディレイ</option>
+              <option value="chorus">コーラス</option>
+            </select>
+            <button id="processBtn" class="btn-primary">無料で加工する</button>
+          </div>
+          <div id="loading" style="display: none">処理中...</div>
+          <div id="result" style="display: none">
+            <audio id="audioPlayer" controls></audio>
+            <a id="downloadLink" href="#" download="processed.wav"
+              >ダウンロード</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- demo -->
+    <section id="demo">
+      <div class="container fade-element">
+        <h2 class="title-text">デモで動作を確認</h2>
+        <p class="desc-text">
+          AIで生成したデモ音源を試聴して、サウンドエフェクターの効果を体験してみましょう。
+        </p>
+        <div class="carousel-layout">
+          <button id="prevBtn" class="btn-arrow">←</button>
+          <div id="albumDisplay"></div>
+          <button id="nextBtn" class="btn-arrow">→</button>
+        </div>
+        <div class="column-layout">
+          <audio id="audioExample" controls>
+            <source id="audioSource" src="" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <select
+            id="effectSelectExample"
+            class="rounded-select uniform-element"
+          >
+            <option value="reverb">リバーブ</option>
+            <option value="delay">ディレイ</option>
+            <option value="chorus">コーラス</option>
+          </select>
+          <button id="applyEffectBtn" class="btn-primary">試聴してみる</button>
+        </div>
+      </div>
+    </section>
     <!-- data-policy -->
-    <section id="data-policy" class="section section-layout">
-      <h2 class="section-title fade-element">データを守る。</h2>
-      <p class="section-text fade-element">
-        Soundforkには、アップロードデータ・生成データは保存されません。<br />
-        エフェクトをかけて、新しいサウンドをお楽しみください。<br />
-        会員登録の必要はありません。料金は無料です。
-      </p>
-      <button id="policy-cta" class="btn-primary">利用してみる</button>
+    <section id="data-policy">
+      <div class="container fade-element">
+        <div class="bg-card bg-secondary">
+          <h2 class="title-text">大切なデータを保護</h2>
+          <p class="desc-text">
+            Soundforkは、あなたの音声データの保存・分析・利用等は行いません。<br />
+            エフェクトで加工して、新しいサウンドをお楽しみください。<br />
+            会員登録の必要はありません。料金は無料です。
+          </p>
+          <button id="policy-cta" class="btn-primary scroll-to-service">
+            利用してみる
+          </button>
+        </div>
+      </div>
     </section>
-
     <!-- footer -->
     <footer class="footer">
       <p class="copyright">&copy; 2025 Soundfork All Rights Reserved.</p>
     </footer>
-
     <!-- script -->
     <script src="app.js"></script>
   </body>
