@@ -1,4 +1,4 @@
-/* ======================== 基本設定 ======================== */
+/* ======================== style ======================== */
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -10,6 +10,7 @@ html {
   box-sizing: inherit;
 }
 
+/* body */
 body {
   padding: 7rem var(--sides-space) 0 var(--sides-space);
   margin: 0;
@@ -32,36 +33,29 @@ body {
   --sides-space-small: 1rem;
   --text-width: 65%;
   --text-width-big: 85%;
-  --bg-color: #fff7f0;
-  --text-color: #5c3a2e;
-  --main-color: #e38b52;
-  --btn-bg-color: #3b1d12;
-  --btn-hover-bg-color: #5c3a2e;
+  --bg-color: #fff9f0;
+  --text-color: #4e2b1f;
+  --main-color: #d77a3d;
+  --btn-bg-color: #5d2c1c;
+  --btn-hover-bg-color: #7b3e2d;
   --btn-text-color: #fff7f0;
 }
 
 /* text */
 h1,
-h2 {
-  font-weight: 500;
+h2,
+h3,
+h4,
+h5,
+p {
   margin: 0;
+  padding: 0;
 }
 
-.hero-title-text {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  width: var(--text-width);
-}
-
-.hero-desc-text {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  width: var(--text-width);
-}
-
+/* section-text */
 .title-text {
   font-size: 2.6rem;
+  font-weight: 500;
   margin-bottom: 1rem;
   width: var(--text-width);
 }
@@ -72,7 +66,7 @@ h2 {
   width: var(--text-width);
 }
 
-/* ======================== section-header ======================== */
+/* ======================== header ======================== */
 .header {
   padding: 0 var(--sides-space);
   display: flex;
@@ -95,11 +89,14 @@ h2 {
   padding: 0;
 }
 
+/* logo */
 .logo-text {
   font-size: 1.6rem;
+  font-weight: 800;
   margin: 0;
 }
 
+/* menu */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -137,36 +134,32 @@ h2 {
   background-color: var(--btn-hover-bg-color);
 }
 
-.btn-primary {
-  background-color: var(--btn-bg-color);
-  border: none;
-  color: var(--btn-text-color);
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 2rem;
-  transition: background 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.btn-primary:hover {
-  background-color: var(--btn-hover-bg-color);
-}
-
-/* ======================== section-hero ======================== */
+/* ======================== hero ======================== */
 /* container */
 .container {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 3.5rem 0;
+  padding: 3rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+}
+
+/* text */
+.hero-title-text {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  width: var(--text-width);
+}
+
+.hero-desc-text {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  width: var(--text-width);
 }
 
 /* btn */
@@ -197,12 +190,12 @@ h2 {
   margin-top: 2rem;
 }
 
-/* ======================== section-effects ======================== */
+/* ======================== effects ======================== */
 .effects-container {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  margin-top: 1.25rem;
+  margin: 1.25rem 0;
   width: 100%;
   max-width: 75rem;
 }
@@ -218,10 +211,10 @@ h2 {
   border-radius: 1rem;
 }
 
-/* ======================== section-service ======================== */
+/* ======================== service ======================== */
 .bg-card {
   width: 100%;
-  padding: 3.5rem 1rem;
+  padding: 3rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,7 +267,7 @@ audio {
   border-radius: 2rem;
 }
 
-/* ======================== section-demo ======================== */
+/* ======================== demo ======================== */
 .carousel-layout {
   display: flex;
   justify-content: space-between;
@@ -314,16 +307,17 @@ audio {
   background-color: #e0e3e4;
 }
 
-/* ======================== section-data ======================== */
+/* ======================== data ======================== */
 .bg-secondary {
   background-color: var(--main-color);
 }
 
-/* ======================== section-footer ======================== */
+/* ======================== footer ======================== */
 .footer {
   padding: 2rem 0;
   text-align: center;
 }
+
 .copyright {
   font-size: 0.8rem;
   color: var(--text-color);
@@ -402,11 +396,15 @@ audio {
     width: var(--text-width-big);
   }
 
+  .effects-container {
+    gap: 2.5rem;
+  }
+
   .title-text {
     font-size: 1.8rem;
   }
   .btn-primary {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
   }
 }

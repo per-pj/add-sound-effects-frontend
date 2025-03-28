@@ -6,12 +6,18 @@
     <title>Soundfork | 音声データをサウンドエフェクターで加工</title>
     <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500&family=Work+Sans:wght@400;500&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- header -->
+    <!---------- header ---------->
     <header class="header">
       <div class="header-inner">
+        <!-- logo -->
         <h3 class="logo-text">Soundfork</h3>
+        <!-- menu -->
         <nav class="nav">
           <ul class="nav-menu">
             <li>
@@ -38,7 +44,7 @@
         </nav>
       </div>
     </header>
-    <!-- hero -->
+    <!---------- hero ---------->
     <section id="hero">
       <div class="container fade-element">
         <h1 class="hero-title-text">音声データをサウンドエフェクターで加工</h1>
@@ -49,13 +55,14 @@
         <img src="hero.jpg" alt="背景画像" class="bgImg" />
       </div>
     </section>
-    <!-- effects -->
+    <!---------- effects ---------->
     <section id="effects">
       <div class="container fade-element">
         <h2 class="title-text">豊かなエフェクト</h2>
         <p class="desc-text">
           現在、3種類のサウンドエフェクターをご利用いただけます。
         </p>
+        <!-- items -->
         <div class="effects-container">
           <div class="effect-item">
             <img src="reverb.jpg" alt="リバーブエフェクト" />
@@ -70,12 +77,13 @@
             <p>コーラス：厚みのある音を作ります</p>
           </div>
         </div>
+        <!-- btn -->
         <button id="effects-cta" class="btn-primary scroll-to-service">
           利用してみる
         </button>
       </div>
     </section>
-    <!-- service  -->
+    <!---------- service  ---------->
     <section id="service">
       <div class="container fade-element">
         <div class="bg-card bg-primary">
@@ -83,21 +91,27 @@
           <p class="desc-text">
             あなたの楽曲や音声ファイルをアップロードし、エフェクトを追加して加工してください。
           </p>
+          <!-- form -->
           <div class="column-layout">
+            <!-- input -->
             <input
               type="file"
               id="audioFile"
               class="rounded-input uniform-element"
               accept="audio/*"
             />
+            <!-- select -->
             <select id="effectSelect" class="rounded-select uniform-element">
               <option value="reverb">リバーブ</option>
               <option value="delay">ディレイ</option>
               <option value="chorus">コーラス</option>
             </select>
+            <!-- btn -->
             <button id="processBtn" class="btn-primary">無料で加工する</button>
           </div>
+          <!-- loading -->
           <div id="loading" style="display: none">処理中...</div>
+          <!-- dl -->
           <div id="result" style="display: none">
             <audio id="audioPlayer" controls></audio>
             <a id="downloadLink" href="#" download="processed.wav"
@@ -107,23 +121,27 @@
         </div>
       </div>
     </section>
-    <!-- demo -->
+    <!---------- demo ---------->
     <section id="demo">
       <div class="container fade-element">
         <h2 class="title-text">デモで動作を確認</h2>
         <p class="desc-text">
           AIで生成したデモ音源を試聴して、サウンドエフェクターの効果を体験してみましょう。
         </p>
+        <!-- album -->
         <div class="carousel-layout">
           <button id="prevBtn" class="btn-arrow">←</button>
           <div id="albumDisplay"></div>
           <button id="nextBtn" class="btn-arrow">→</button>
         </div>
+        <!-- column -->
         <div class="column-layout">
+          <!-- music -->
           <audio id="audioExample" controls>
             <source id="audioSource" src="" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
+          <!-- select -->
           <select
             id="effectSelectExample"
             class="rounded-select uniform-element"
@@ -132,11 +150,12 @@
             <option value="delay">ディレイ</option>
             <option value="chorus">コーラス</option>
           </select>
+          <!-- btn -->
           <button id="applyEffectBtn" class="btn-primary">試聴してみる</button>
         </div>
       </div>
     </section>
-    <!-- data-policy -->
+    <!---------- data-policy ---------->
     <section id="data-policy">
       <div class="container fade-element">
         <div class="bg-card bg-secondary">
@@ -150,11 +169,11 @@
         </div>
       </div>
     </section>
-    <!-- footer -->
+    <!---------- footer ---------->
     <footer class="footer">
       <p class="copyright">&copy; 2025 Soundfork All Rights Reserved.</p>
     </footer>
-    <!-- script -->
+    <!---------- script ---------->
     <script src="app.js"></script>
   </body>
 </html>

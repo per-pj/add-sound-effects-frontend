@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  /* ======================== demoセクション（カルーセル＆サンプル再生） ======================== */
+  /* ======================== demo（カルーセル＆サンプル再生） ======================== */
   const albumDisplay = document.getElementById('albumDisplay');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
