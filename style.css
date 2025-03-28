@@ -34,11 +34,11 @@ body {
   --text-width: 65%;
   --text-width-big: 85%;
   --bg-color: #fff9f0;
-  --text-color: #4e2b1f;
-  --main-color: #d77a3d;
+  --text-color: #3d1f14;
+  --main-color: #fdf4e3;
   --btn-bg-color: #5d2c1c;
-  --btn-hover-bg-color: #7b3e2d;
-  --btn-text-color: #fff7f0;
+  --btn-hover-bg-color: #964e36;
+  --btn-text-color: #ffffff;
 }
 
 /* text */
@@ -54,21 +54,21 @@ p {
 
 /* section-text */
 .title-text {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 1rem;
   width: var(--text-width);
 }
 
 .desc-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   width: var(--text-width);
 }
 
 /* ======================== header ======================== */
 .header {
-  padding: 0 var(--sides-space);
+  padding: 1rem var(--sides-space);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,7 +92,8 @@ p {
 /* logo */
 .logo-text {
   font-size: 1.6rem;
-  font-weight: 800;
+  font-weight: bold;
+  letter-spacing: -0.06rem;
   margin: 0;
 }
 
