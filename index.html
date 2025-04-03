@@ -34,28 +34,17 @@
     />
   </head>
   <body>
-    <!---------- header ---------->
     <header class="header">
-      <div class="header-inner">
-        <!-- logo -->
+      <div class="section-inner">
         <h3 class="logo-text">Soundfork</h3>
-        <!-- menu -->
         <nav class="nav">
           <ul class="nav-menu">
             <li>
-              <a href="#effects" class="nav-link hide-on-mobile">エフェクト</a>
+              <a href="#pattern" class="nav-link hide-on-mobile">エフェクト</a>
             </li>
             <li><a href="#demo" class="nav-link hide-on-mobile">デモ</a></li>
             <li>
               <a href="#data-policy" class="nav-link hide-on-mobile">料金</a>
-            </li>
-            <li>
-              <a
-                href="https://per-pj.github.io/per-pj/"
-                target="_blank"
-                class="nav-link hide-on-mobile"
-                >運営</a
-              >
             </li>
             <li>
               <a
@@ -74,140 +63,180 @@
         </nav>
       </div>
     </header>
-    <!---------- hero ---------->
+
     <section id="hero">
       <div class="container fade-element">
         <h1 class="hero-title-text">
           アーティストのためのシンプルなサウンドエフェクター
         </h1>
         <p class="hero-desc-text">
-          お気に入りのエフェクトを選択して、あなたの音声ファイルを手軽にカスタマイズできます。
+          お気に入りのエフェクトを選択するだけで、音声ファイルを簡単にカスタマイズできます。
         </p>
         <button class="btn-primary scroll-to-service">無料で利用する</button>
-        <img src="img/hero.jpg" alt="背景画像" class="bgImg" />
+        <img src="img/hero.jpg" alt="背景画像" class="img-bg" />
       </div>
     </section>
-    <!---------- effects ---------->
-    <section id="effects">
+
+    <section id="pattern">
       <div class="container fade-element">
-        <h2 class="title-text">豊かなエフェクト</h2>
+        <h2 class="title-text">豊かなエフェクトを活用</h2>
         <p class="desc-text">
           現在、3種類のサウンドエフェクターをご利用いただけます。
         </p>
-        <!-- items -->
         <div class="effects-container">
           <div class="effect-item">
             <img src="img/reverb.jpg" alt="リバーブエフェクト" />
-            <p>リバーブ：音に奥行きを加えます</p>
+            <h3>リバーブエフェクト</h3>
+            <p>音に奥行きを加えます</p>
           </div>
-          <div class="effect-item">
+          <div class="effect-item margin-top-normal">
             <img src="img/delay.jpg" alt="ディレイエフェクト" />
-            <p>ディレイ：エコーのような効果を生みます</p>
+            <h3>ディレイエフェクト</h3>
+            <p>エコーのような効果を生みます</p>
           </div>
-          <div class="effect-item">
+          <div class="effect-item margin-top-normal">
             <img src="img/chorus.jpg" alt="コーラスエフェクト" />
-            <p>コーラス：厚みのある音を作ります</p>
+            <h3>コーラスエフェクト</h3>
+            <p>厚みのある音を作ります</p>
           </div>
         </div>
-        <!-- btn -->
         <button id="effects-cta" class="btn-primary scroll-to-service">
           無料で利用する
         </button>
       </div>
     </section>
-    <!---------- service  ---------->
+
     <section id="service">
       <div class="container fade-element">
-        <div class="bg-card">
-          <h2 class="title-text">音声をカスタマイズ</h2>
-          <p class="desc-text">
-            音声ファイルをアップロードし、エフェクトを選択してください。<br />音声ファイルを再生したり、ダウンロードできます。
-          </p>
-          <!-- form -->
-          <div class="column-layout">
-            <!-- input -->
-            <input
-              type="file"
-              id="audioFile"
-              class="rounded-input uniform-element"
-              accept="audio/*"
-            />
-            <!-- select -->
-            <select id="effectSelect" class="rounded-select uniform-element">
-              <option value="reverb">リバーブ</option>
-              <option value="delay">ディレイ</option>
-              <option value="chorus">コーラス</option>
-            </select>
-            <!-- btn -->
-            <button id="processBtn" class="btn-primary">無料で利用する</button>
-          </div>
-          <!-- loading -->
-          <div id="loading" style="display: none">処理中...</div>
-          <!-- dl -->
-          <div id="result" style="display: none">
-            <audio id="audioPlayer" controls></audio>
-            <a id="downloadLink" href="#" download="processed.wav"
-              >ダウンロード</a
-            >
+        <div class="bg-card card-service">
+          <div class="flex-between">
+            <div class="flex-item">
+              <img src="img/service.jpg" alt="背景画像" class="asset-img" />
+            </div>
+            <div class="flex-item">
+              <h2 class="title-text">音声ファイルをカスタマイズしませんか?</h2>
+              <p class="desc-text">
+                音声ファイルをアップロードし、エフェクトを選択してください。音声ファイルの再生、ダウンロードができます。
+              </p>
+              <div class="form-items">
+                <input
+                  type="file"
+                  id="audioFile"
+                  class="rounded-input uniform-element"
+                  accept="audio/*"
+                />
+                <select
+                  id="effectSelect"
+                  class="rounded-select uniform-element"
+                >
+                  <option value="reverb">リバーブエフェクト</option>
+                  <option value="delay">ディレイエフェクト</option>
+                  <option value="chorus">コーラスエフェクト</option>
+                </select>
+                <button id="processBtn" class="btn-primary">
+                  無料で利用する
+                </button>
+              </div>
+              <!-- loading -->
+              <div id="loading" style="display: none">処理中...</div>
+              <!-- dl -->
+              <div id="result" style="display: none">
+                <audio id="audioPlayer" controls></audio>
+                <a id="downloadLink" href="#" download="processed.wav"
+                  >ダウンロード</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!---------- demo ---------->
+
     <section id="demo">
       <div class="container fade-element">
-        <h2 class="title-text">デモで試聴</h2>
-        <p class="desc-text">
-          AIで生成したデモ音源を試聴して、サウンドエフェクターの効果を体験してみましょう。
-        </p>
-        <!-- album -->
-        <div class="carousel-layout">
-          <button id="prevBtn" class="btn-arrow">←</button>
-          <div id="albumDisplay"></div>
-          <button id="nextBtn" class="btn-arrow">→</button>
-        </div>
-        <!-- column -->
-        <div class="column-layout">
-          <!-- music -->
-          <audio id="audioExample" controls>
-            <source id="audioSource" src="" type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
-          <!-- select -->
-          <select
-            id="effectSelectExample"
-            class="rounded-select uniform-element"
-          >
-            <option value="reverb">リバーブ</option>
-            <option value="delay">ディレイ</option>
-            <option value="chorus">コーラス</option>
-          </select>
-          <!-- btn -->
-          <button id="applyEffectBtn" class="btn-primary">
-            エフェクトを実行
-          </button>
+        <div class="bg-card card-demo">
+          <h2 class="title-text">デモ音源でお試しください</h2>
+          <p class="desc-text">
+            サウンドエフェクターの効果を実感してみましょう。
+          </p>
+          <div class="flex-between-music">
+            <button id="prevBtn" class="btn-arrow">←</button>
+            <div id="albumDisplay"></div>
+            <button id="nextBtn" class="btn-arrow">→</button>
+          </div>
+          <div class="form-items">
+            <audio id="audioExample" controls>
+              <source id="audioSource" src="" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+            <select
+              id="effectSelectExample"
+              class="rounded-select uniform-element"
+            >
+              <option value="reverb">リバーブエフェクト</option>
+              <option value="delay">ディレイエフェクト</option>
+              <option value="chorus">コーラスエフェクト</option>
+            </select>
+            <button id="applyEffectBtn" class="btn-primary">実行</button>
+          </div>
         </div>
       </div>
     </section>
-    <!---------- data-policy ---------->
+
     <section id="data-policy">
       <div class="container fade-element">
-        <div class="bg-card">
-          <h2 class="title-text">大切なデータを保護</h2>
-          <p class="desc-text">
-            Soundforkは、あなたの音声データの保存・分析・利用等は行いません。<br />エフェクトで加工して、新しいサウンドをお楽しみください。<br />会員登録の必要はありません。料金は無料です。
-          </p>
-          <button id="policy-cta" class="btn-primary scroll-to-service">
-            無料で利用する
-          </button>
+        <div class="bg-card card-data-policy">
+          <div class="flex-between">
+            <div class="flex-item">
+              <img src="img/data.jpg" alt="背景画像" class="asset-img" />
+            </div>
+            <div class="flex-item">
+              <h2 class="title-text">大切なデータを保護します</h2>
+              <p class="desc-text">
+                Soundforkは、あなたの音声データの保存・分析・利用等は行いません。エフェクトで加工して、新しいサウンドをお楽しみください。
+              </p>
+              <button id="policy-cta" class="btn-primary scroll-to-service">
+                無料で利用する
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!---------- footer ---------->
+
     <footer class="footer">
-      <p class="copyright">&copy; 2025 Soundfork All Rights Reserved.</p>
+      <div class="section-inner">
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li>
+              <a href="#pattern" class="nav-link hide-on-mobile">エフェクト</a>
+            </li>
+            <li><a href="#demo" class="nav-link hide-on-mobile">デモ</a></li>
+            <li>
+              <a href="#data-policy" class="nav-link hide-on-mobile">料金</a>
+            </li>
+            <li>
+              <a
+                href="https://forms.gle/Ut5iUNWu5gwdYSn97"
+                target="_blank"
+                class="nav-link"
+                >お問い合わせ</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://per-pj.github.io/per-pj/"
+                target="_blank"
+                class="nav-link hide-on-mobile"
+                >運営</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <p class="copyright">&copy; 2025 Soundfork All Rights Reserved.</p>
+      </div>
     </footer>
-    <!---------- script ---------->
+
     <script src="app.js"></script>
   </body>
 </html>

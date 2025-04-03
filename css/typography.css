@@ -1,4 +1,4 @@
-/* text */
+/* hero */
 .hero-title-text {
   font-size: 4rem;
   font-weight: 600;
@@ -8,21 +8,23 @@
 }
 
 .hero-desc-text {
-  font-size: 1.2rem;
   margin-bottom: 1rem;
   width: var(--text-width);
 }
 
-/* section-text */
+/* section */
 .title-text {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 1rem;
-  width: var(--text-width);
+  line-height: 3.5rem;
 }
 
 .desc-text {
-  font-size: 1.1rem;
   margin-bottom: 1rem;
-  width: var(--text-width);
+}
+
+/* effects */
+.effect-item h3 {
+  font-size: 1.5rem;
 }

@@ -1,11 +1,11 @@
 /* 768px */
 @media (max-width: 48rem) {
   body {
-    padding: 6rem var(--sides-space-small) 0 var(--sides-space-small);
+    padding: 6rem var(--space-sides-small) 0 var(--space-sides-small);
   }
 
   .header {
-    padding: 0 var(--sides-space-small);
+    padding: 0 var(--space-sides-small);
   }
 
   .hide-on-mobile {
@@ -18,11 +18,28 @@
 
   .title-text {
     font-size: 2rem;
+    width: 100%;
+  }
+
+  .bg-card {
+    padding: 2rem 1rem;
+  }
+
+  .flex-between {
+    flex-direction: column;
+    width: 100%;
+  }
+  .flex-item {
+    width: 100%;
+    text-align: center;
   }
 
   .effect-item {
     width: 100%;
     text-align: center;
+  }
+  .margin-top-normal {
+    margin-top: 2rem;
   }
 
   .uniform-element,
@@ -56,13 +73,13 @@
 @media (max-width: 30rem) {
   .hero-title-text {
     font-size: 2rem;
-    width: var(--text-width-big);
+    width: 100%;
   }
 
   .hero-desc-text,
   .title-text,
   .desc-text {
-    width: var(--text-width-big);
+    width: 100%;
   }
 
   .effects-container {
@@ -75,5 +92,12 @@
   .btn-primary {
     padding: 1rem 2rem;
     font-size: 1rem;
+  }
+  #albumDisplay {
+    width: 200px;
+    height: 200px;
+  }
+  .margin-top-normal {
+    margin-top: 1rem;
   }
 }

@@ -1,18 +1,19 @@
 .header {
-  padding: 0 var(--sides-space);
+  padding: 0 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   position: fixed;
-  background-color: var(--bg-color);
+  background-color: var(--color-black);
+  color: var(--color-white);
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
 }
 
-.header-inner {
+.section-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,8 +23,11 @@
 
 /* logo */
 .logo-text {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 1.65rem;
+  color: var(--color-white);
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-weight: 800;
   letter-spacing: -0.06rem;
   margin: 0;
 }
@@ -32,6 +36,7 @@
 .nav-menu {
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
 .nav-menu li {
@@ -40,28 +45,13 @@
 }
 
 .nav-link {
-  color: var(--text-color);
+  color: var(--color-white);
   font-size: 0.95rem;
+  font-weight: 800;
   text-decoration: none;
   margin-right: 1.8rem;
-}
-
-/* btn */
-.btn-header {
-  background-color: var(--btn-bg-color);
-  border: none;
-  color: var(--btn-text-color);
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
   cursor: pointer;
-  border-radius: 0.5rem;
-  transition: background 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
 }
-
-.btn-header:hover {
-  background-color: var(--btn-hover-bg-color);
+.nav-link:hover {
+  color: var(--color-yellow);
 }
