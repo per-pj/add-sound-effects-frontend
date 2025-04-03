@@ -1,0 +1,11 @@
+/* fade-in */
+.fade-element {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

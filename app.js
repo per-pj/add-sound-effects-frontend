@@ -56,9 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const audioSource = document.getElementById('audioSource');
 
   const albums = [
-    { title: '', cover: 'jazz.jpg', audio: 'jazz.mp3' },
-    { title: '', cover: 'chill.jpg', audio: 'chill.mp3' },
-    { title: '', cover: 'rap.jpg', audio: 'rap.mp3' },
+    { title: '', cover: 'img/jazz.jpg', audio: 'music/jazz.mp3' },
+    { title: '', cover: 'img/chill.jpg', audio: 'music/chill.mp3' },
+    { title: '', cover: 'img/rap.jpg', audio: 'music/rap.mp3' },
   ];
   let currentAlbum = 0;
 

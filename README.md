@@ -2,7 +2,7 @@
 
 add-sound-effects-app
 
-## Credit
+## 素材について
 
 - **動画素材:**
 

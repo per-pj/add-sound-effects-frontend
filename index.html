@@ -3,9 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Soundfork | 音声データをサウンドエフェクターで加工</title>
+    <title>Soundfork | アーティスト向けのサウンドエフェクター</title>
     <link rel="icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/typography.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/btn.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/motion.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500&family=Work+Sans:wght@400;500&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;500&display=swap"
       rel="stylesheet"
@@ -29,6 +37,14 @@
             </li>
             <li>
               <a
+                href="https://per-pj.github.io/per-pj/"
+                target="_blank"
+                class="nav-link hide-on-mobile"
+                >運営</a
+              >
+            </li>
+            <li>
+              <a
                 href="https://forms.gle/Ut5iUNWu5gwdYSn97"
                 target="_blank"
                 class="nav-link"
@@ -37,7 +53,7 @@
             </li>
             <li>
               <button class="btn-header scroll-to-service hide-on-mobile">
-                加工する
+                無料で利用
               </button>
             </li>
           </ul>
@@ -47,12 +63,14 @@
     <!---------- hero ---------->
     <section id="hero">
       <div class="container fade-element">
-        <h1 class="hero-title-text">音声データをサウンドエフェクターで加工</h1>
+        <h1 class="hero-title-text">
+          アーティストのためのシンプルなサウンドエフェクター
+        </h1>
         <p class="hero-desc-text">
-          エフェクトを選択し、あなたの楽曲や音声ファイルをカスタマイズしましょう。新しいサウンドを再生したり、ダウンロードできます。
+          お気に入りのエフェクトを選択して、あなたの音声ファイルを手軽にカスタマイズできます。
         </p>
-        <button class="btn-primary scroll-to-service">利用してみる</button>
-        <img src="hero.jpg" alt="背景画像" class="bgImg" />
+        <button class="btn-primary scroll-to-service">無料で利用する</button>
+        <img src="img/hero.jpg" alt="背景画像" class="bgImg" />
       </div>
     </section>
     <!---------- effects ---------->
@@ -65,31 +83,31 @@
         <!-- items -->
         <div class="effects-container">
           <div class="effect-item">
-            <img src="reverb.jpg" alt="リバーブエフェクト" />
+            <img src="img/reverb.jpg" alt="リバーブエフェクト" />
             <p>リバーブ：音に奥行きを加えます</p>
           </div>
           <div class="effect-item">
-            <img src="delay.jpg" alt="ディレイエフェクト" />
+            <img src="img/delay.jpg" alt="ディレイエフェクト" />
             <p>ディレイ：エコーのような効果を生みます</p>
           </div>
           <div class="effect-item">
-            <img src="chorus.jpg" alt="コーラスエフェクト" />
+            <img src="img/chorus.jpg" alt="コーラスエフェクト" />
             <p>コーラス：厚みのある音を作ります</p>
           </div>
         </div>
         <!-- btn -->
         <button id="effects-cta" class="btn-primary scroll-to-service">
-          利用してみる
+          無料で利用する
         </button>
       </div>
     </section>
     <!---------- service  ---------->
     <section id="service">
       <div class="container fade-element">
-        <div class="bg-card bg-primary">
-          <h2 class="title-text">今すぐ音声データを加工</h2>
+        <div class="bg-card">
+          <h2 class="title-text">音声をカスタマイズ</h2>
           <p class="desc-text">
-            あなたの楽曲や音声ファイルをアップロードし、エフェクトを追加して加工してください。
+            音声ファイルをアップロードし、エフェクトを選択してください。<br />音声ファイルを再生したり、ダウンロードできます。
           </p>
           <!-- form -->
           <div class="column-layout">
@@ -107,7 +125,7 @@
               <option value="chorus">コーラス</option>
             </select>
             <!-- btn -->
-            <button id="processBtn" class="btn-primary">無料で加工する</button>
+            <button id="processBtn" class="btn-primary">無料で利用する</button>
           </div>
           <!-- loading -->
           <div id="loading" style="display: none">処理中...</div>
@@ -124,7 +142,7 @@
     <!---------- demo ---------->
     <section id="demo">
       <div class="container fade-element">
-        <h2 class="title-text">デモで動作を確認</h2>
+        <h2 class="title-text">デモで試聴</h2>
         <p class="desc-text">
           AIで生成したデモ音源を試聴して、サウンドエフェクターの効果を体験してみましょう。
         </p>
@@ -151,20 +169,22 @@
             <option value="chorus">コーラス</option>
           </select>
           <!-- btn -->
-          <button id="applyEffectBtn" class="btn-primary">試聴してみる</button>
+          <button id="applyEffectBtn" class="btn-primary">
+            エフェクトを実行
+          </button>
         </div>
       </div>
     </section>
     <!---------- data-policy ---------->
     <section id="data-policy">
       <div class="container fade-element">
-        <div class="bg-card bg-secondary">
+        <div class="bg-card">
           <h2 class="title-text">大切なデータを保護</h2>
           <p class="desc-text">
-            Soundforkは、あなたの音声データの保存・分析・利用等は行いません。エフェクトで加工して、新しいサウンドをお楽しみください。会員登録の必要はありません。料金は無料です。
+            Soundforkは、あなたの音声データの保存・分析・利用等は行いません。<br />エフェクトで加工して、新しいサウンドをお楽しみください。<br />会員登録の必要はありません。料金は無料です。
           </p>
           <button id="policy-cta" class="btn-primary scroll-to-service">
-            利用してみる
+            無料で利用する
           </button>
         </div>
       </div>

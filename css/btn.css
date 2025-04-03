@@ -1,0 +1,19 @@
+/* btn */
+.btn-primary {
+  background-color: var(--btn-bg-color);
+  border: none;
+  color: var(--btn-text-color);
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-hover-bg-color);
+}
